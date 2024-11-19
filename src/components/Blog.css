@@ -1,0 +1,40 @@
+.card{
+    display: flex;
+    padding: 20px;
+}
+
+
+.blog{
+    padding: 20px;
+    display: block;
+    
+}
+.blog h1 {
+    color: #000;
+    font-size: 2rem;
+}
+.blog .post{
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.blog .post h1 {
+    color: blue;
+} 
+.blog {
+    border: 1px solid #ddd;
+    padding: 20pxpx;
+    margin-bottom: 16px;
+  }
+  
+  .post {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .post {
+      grid-template-columns: 1fr;
+    }
+}
