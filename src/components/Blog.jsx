@@ -1,7 +1,8 @@
 import'./Blog.css'
 function Blog() {
     const  posts  = [
-        {title: 'Learning React', 
+        {   id:1,
+            title: 'Learning React', 
             ImageUrl:'/images/5Untitled.jpg',
              content: 'React is a powerful JavaScript library for building user interfaces',
               author: 'John Doe',
@@ -9,7 +10,8 @@ function Blog() {
             },
 
 
-        {title: 'Getting Started with Vite', 
+           { id:2,
+            title: 'Getting Started with Vite', 
             ImageUrl:'/images/Untitled.jpg',
             content: 'Vite makes development fast and simple',
              author: 'Jane Smith', 
@@ -17,14 +19,15 @@ function Blog() {
             },
 
 
-            {title: 'Getting Started with Vite', 
+            {   id:3,
+                title: 'Getting Started with Vite', 
                 ImageUrl:'/images/Untitled.jpg 6.jpg',
                 content: 'Vite makes development fast and simple',
                  author: 'jaden Smith', 
                  Date:'26/6/2024'
                 },
 
-                
+
     ]
     return (
         <div  className='card'>
