@@ -7,6 +7,7 @@ import './Navbar.css'
             <Link to="/about">About</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/counter">Counter</Link>
+            <Link to="/Form">Form</Link>
 
         </nav>
     );

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import BlogDetails from './components/BlogDetails'
 import Counter from './components/Counter'
+import  Form  from './components/Form'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path ="/counter" element={<Counter/>}/>
+      <Route path ="/Form" element={<Form/>}/>
     </Routes>
     
     </div>
