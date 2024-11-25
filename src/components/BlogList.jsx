@@ -20,6 +20,8 @@ const BlogList = () => {
           },
     ]);
 
+    const [visibleCount, setVisibleCount] = useState(3);
+
     const loadMorePosts = () => {
         const newPosts = [
             {
@@ -34,13 +36,18 @@ const BlogList = () => {
               },
         ];
         setPosts((prevPosts) => [...prevPosts, ...newPosts]);
+        setVisibleCount((prevCount) => prevCount + newPosts.length);
     };
+
+    const showLessPosts = () => {
+        setVisibleCount(3);
+    }
 
     return (
         <>
             <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
             <div>
-                {posts.map((post) => (
+                {posts.slice(0, visibleCount).map((post) => (
                     <div key={post.id} className="border-b pb-4 mb-4">
                         <h2>{post.title}</h2>
                         <p>{post.excerpt}</p>
@@ -52,6 +59,13 @@ const BlogList = () => {
                 className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
             >
                 Load More posts
+            </button>
+
+            <button
+                onClick={showLessPosts}
+                className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+            >
+                Show Less
             </button>
         </>
     );
