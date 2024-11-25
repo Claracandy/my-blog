@@ -9,6 +9,7 @@ import './Navbar.css'
             <Link to="/counter">Counter</Link>
             <Link to="/Form">Form</Link>
             <Link to="/BlogList">BlogList</Link>
+            <Link to="/ WizardForm"> WizardForm</Link>
 
 
         </nav>
