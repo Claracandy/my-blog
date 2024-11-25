@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const BlogList = () => {
 
-    const [posts, setPosts] = useState([
+    const allPosts = [
         {
             id: 1,
             title: "Understanding React",
@@ -18,25 +18,23 @@ const BlogList = () => {
             title: "Why Tailwind CSS?",
             excerpt: "Tailwind CSS is a utility-first CSS framework for rapid UI development.",
           },
-    ]);
+          {
+            id: 4,
+            title: "Exploring JavaScript ES6",
+            excerpt: "ES6 introduced many new features to JavaScript, making it more powerful.",
+          },
+          {
+            id: 5,
+            title: "The Future of Web Development",
+            excerpt: "Discover trends and tools shaping the future of web development.",
+          },
+    ];
 
     const [visibleCount, setVisibleCount] = useState(3);
 
     const loadMorePosts = () => {
-        const newPosts = [
-            {
-                id: 4,
-                title: "Exploring JavaScript ES6",
-                excerpt: "ES6 introduced many new features to JavaScript, making it more powerful.",
-              },
-              {
-                id: 5,
-                title: "The Future of Web Development",
-                excerpt: "Discover trends and tools shaping the future of web development.",
-              },
-        ];
-        setPosts((prevPosts) => [...prevPosts, ...newPosts]);
-        setVisibleCount((prevCount) => prevCount + newPosts.length);
+       
+        setVisibleCount(allPosts.length);
     };
 
     const showLessPosts = () => {
@@ -47,7 +45,7 @@ const BlogList = () => {
         <>
             <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
             <div>
-                {posts.slice(0, visibleCount).map((post) => (
+                {allPosts.slice(0, visibleCount).map((post) => (
                     <div key={post.id} className="border-b pb-4 mb-4">
                         <h2>{post.title}</h2>
                         <p>{post.excerpt}</p>
