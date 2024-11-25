@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import BlogDetails from './components/BlogDetails'
 import Counter from './components/Counter'
 import  Form  from './components/Form'
+import BlogList from './components/BlogList'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path ="/counter" element={<Counter/>}/>
       <Route path ="/Form" element={<Form/>}/>
+      <Route path ="/BlogList" element={<BlogList/>}/>
     </Routes>
     
     </div>

@@ -16,7 +16,7 @@ function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(Name: ${ form.name }, Email: ${ form.email });
+        
     };
 
     return (
