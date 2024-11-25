@@ -23,7 +23,7 @@ function App() {
       <Route path ="/counter" element={<Counter/>}/>
       <Route path ="/Form" element={<Form/>}/>
       <Route path ="/BlogList" element={<BlogList/>}/>
-      <Route path ="/WizardForm" element={<WizardForm/>}/>
+      <Route path ="/WizardForm" element ={< WizardForm/>}/>
     </Routes>
     
     </div>
