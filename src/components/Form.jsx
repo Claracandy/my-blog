@@ -1,17 +1,25 @@
-import { useState } from "react";function Form() {
+import { useState } from "react";
+
+function Form() {
     const [form, setForm] = useState({
         name: '',
         email: '',
-    });    const handleChange = (e) => {
-        const {name, value} = e.target;
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
         setForm((prevForm) => ({
             ...prevForm,
             [name]: value,
         }));
-    };    const handleSubmit = (e) => {
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        alert(Name: ${form.name}, Email :${form.email});
-    };    return (
+        alert(Name: ${ form.name }, Email: ${ form.email });
+    };
+
+    return (
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Name:</label>
@@ -30,7 +38,11 @@ import { useState } from "react";function Form() {
                     value={form.email}
                     onChange={handleChange}
                 />
-            </div>            <button type="submit">Submit</button>
+            </div>
+
+            <button type="submit">Submit</button>
         </form>
     )
-}export default Form;
+}
+
+export default Form;
