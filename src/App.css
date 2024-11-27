@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .light {
+    background-color: white;
+    color: black;
+  }
+  
+  .light .navbar {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  
+  .dark {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  .dark .navbar {
+    background-color: #333;
+    color: white;
+  }
+  
+  
+  .theme-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .theme-toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .light .theme-toggle-btn {
+    background-color: #333;
+    color: white;
+  }
+  
+  .dark .theme-toggle-btn {
+    background-color: #f0f0f0;
+    color:black;}
